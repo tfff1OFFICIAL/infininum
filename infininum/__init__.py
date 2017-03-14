@@ -24,9 +24,9 @@ class InfiniNum:
         if self.enable_logging:
             print(text)
 
-    def __add__(self, right_num):
+    def __iadd__(self, right_num):
         """
-        + support
+        += support
         :param right_num: Inifininum object
         """
         self._log("Starting:\n for n in range(0, {})".format(len(right_num.num)))
@@ -58,6 +58,8 @@ class InfiniNum:
                 # location doesn't exist in number
                 self.num.append(right_num[n])
         self._log("Finished")
+
+        return self
 
     def round_whole_num(self, digits):
         """

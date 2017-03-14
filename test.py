@@ -7,6 +7,6 @@ print("my_num is: {}, or: {}".format(my_num.num, my_num))
 
 # should be 41
 
-my_num + my_num_2
+my_num += my_num_2
 
 print(my_num)
